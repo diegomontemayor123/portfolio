@@ -19,6 +19,9 @@ footer p {
   font-size: 0.9rem;
 }
 
-.project-images{display:flex;gap:1rem;justify-content:center;align-items:center}
-.project-images img{max-width:48%;height:auto}
-@media(max-width:768px){.project-images{flex-direction:column}}
+.project-images {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
