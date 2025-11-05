@@ -8,8 +8,8 @@ const projects = [
     tech: "React Native, Node.js, MongoDB",
     description:
       "ShareIt is a full-stack mobile marketplace for peer-to-peer rental of outdoor equipment. The platform supports real-time gear listings with images, availability calendars, and category-based filtering. Users can like, comment on, and bookmark gear; all data syncs with a custom Node.js/Express backend and MongoDB. On the frontend, I'm building the app in React Native with modular UI components, form validation, and real-time state updates. ShareIt also features early-stage escrow logic and a secure messaging system for renters and owners to coordinate transactions.",
-    image: "/images/share_it-portrait.png",
-    image2: "/images/share_it_3-portrait.png",
+    image: `${process.env.PUBLIC_URL}/images/share_it-portrait.png`,
+    image2: `${process.env.PUBLIC_URL}/images/share_it_3-portrait.png`,
     alt: "ShareIt App",
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     tech: "Google Apps Script, Zoho API",
     description:
       "An end-to-end automation system that connects Google Calendar, Forms, Sheets, and Zoho Invoice to streamline service scheduling and billing. The workflow parses upcoming appointments, sends pre-filled service selection forms, and auto-generates structured invoices based on user input.\n\nBuilt with custom regex parsers, contact matching logic, and OAuth token refresh flows, the system includes error handling, duplicate protection, and dynamic email generation. Designed to reduce manual overhead and improve billing accuracy through modular, maintainable code.",
-    image: "/images/invoicing_workflow-portrait.png",
+    image: `${process.env.PUBLIC_URL}/images/invoicing_workflow-portrait.png`,
     alt: "Invoicing System",
   },
   {
@@ -25,7 +25,7 @@ const projects = [
     tech: "Python, PyTorch",
     description:
       "A fully custom-built deep learning system designed to allocate capital across major tech stocks like AAPL, MSFT, and NVDA. The model uses a transformer architecture trained to directly optimize the Sharpe ratio while minimizing overfitting. The full pipeline includes feature engineering with rolling statistics, volatility, and volume signals; a differentiable loss function that penalizes poor returns and excessive leverage; and walk-forward testing across rolling time windows. Training, validation, and backtesting are all GPU-accelerated, and over 1,000 hyperparameter combinations are tested through parallelized grid search. Final outputs include daily portfolio weights, performance visualizations, and backtest analytics compared to benchmarks.",
-    image: "/images/algo_trader.png",
+    image: `${process.env.PUBLIC_URL}/images/algo_trader.png`,
     alt: "Trader",
   },
   {
@@ -33,8 +33,8 @@ const projects = [
     tech: "React Native, Node.js, MongoDB",
     description:
       "LetsFeast is a prototype full-stack mobile social platform for sharing and discovering user-generated recipes. The app supports likes, bookmarks, threaded comments, and direct messaging. I built the entire stack with a Node.js/Express backend (Joi validation, JWT auth, MongoDB), and a modular React Native frontend with image uploads, real-time feed filtering, and interactive UI components. Messaging includes push notifications, user avatars, and shared recipe previews via chat. Features like following, commenting, and personalized feeds encourage organic community engagement.",
-    image: "/images/lets_feast-portrait.png",
-    image2: "/images/lets_feast_3-portrait.png",
+    image: `${process.env.PUBLIC_URL}/images/lets_feast-portrait.png`,
+    image2: `${process.env.PUBLIC_URL}/images/lets_feast_3-portrait.png`,
     alt: "LetsFeast – Mobile Recipe Sharing Platform"
   },
   {
@@ -42,7 +42,7 @@ const projects = [
     tech: "Python",
     description:
       "Farmer Invasion is a retro-inspired, configurable arcade shooter built in Python using Pygame. Features include automatic firing, ship and bullet customization, procedurally generated enemy waves, and scalable difficulty. Created as a self-directed learning project to deepen fluency in Python and object-oriented programming by architecting a clean, modular, and extendable codebase.",
-    image: "/images/farmer_invasion.png",
+    image: `${process.env.PUBLIC_URL}/images/farmer_invasion.png`,
     alt: "Farmer Invasion Game",
   },
 ];
@@ -60,7 +60,7 @@ function App() {
               <Nav.Link href="#about">About</Nav.Link>
               <Nav.Link href="#projects">Projects</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
-              <Nav.Link href="/images/Montemayor_Diego_CV.pdf">Resume</Nav.Link>
+              <Nav.Link href={`${process.env.PUBLIC_URL}/images/Montemayor_Diego_CV.pdf`}>Resume</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -93,7 +93,7 @@ function App() {
                 I'm excited to bring my unique blend of financial savvy and engineering skill to innovative teams focused on solving tough challenges. Remote collaboration? Absolutely — I'm always just a video call away.
               </p>
               <p>
-                <a href="/images/Montemayor_Diego_CV.pdf" target="_blank" rel="noopener noreferrer" style={{ fontWeight: '600', color: '#007bff', textDecoration: 'underline' }}>
+                <a href={`${process.env.PUBLIC_URL}/images/Montemayor_Diego_CV.pdf`} target="_blank" rel="noopener noreferrer" style={{ fontWeight: '600', color: '#007bff', textDecoration: 'underline' }}>
                   Download my Resume (PDF)
                 </a>
               </p>
