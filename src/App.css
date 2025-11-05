@@ -1,33 +1,13 @@
-/* Background gradient for header */
-.bg-gradient {
-  background: linear-gradient(90deg, #007bff 0%, #6610f2 100%);
-}
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
+.bg-gradient {background: linear-gradient(90deg, #007bff 0%, #6610f2 100%);}
 
-/* Nav link hover */
-.nav-link:hover {
-  color: #f8f9fa !important;
-  text-decoration: underline;
-}
+html {scroll-behavior: smooth;}
 
-/* Footer smaller font */
-footer p {
-  font-size: 0.9rem;
-}
+.nav-link:hover {color: #f8f9fa !important;text-decoration: underline;}
 
-.project-images {
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-  justify-content: center;
-}
+footer p {font-size: 0.9rem}
 
-@media (min-width: 768px) {
-  .project-images {
-    flex-direction: row;
-  }
-}
+.project-images {display: flex;gap: 1rem;flex-direction: column;justify-content: center}
+@media (min-width: 768px) {.project-images {flex-direction: row}}
+
+.project-text {padding-top: 1.5rem;}

@@ -3,7 +3,7 @@ import './App.css';
 
 const projects = [
   {
-    title: "ShareIt Marketplace (Ongoing)",
+    title: "ShareIt Marketplace",
     tech: "React Native, Node.js, MongoDB",
     description:
       "ShareIt is a full-stack mobile marketplace for peer-to-peer rental of outdoor equipment. The platform supports real-time gear listings with images, availability calendars, and category-based filtering. Users can like, comment on, and bookmark gear; all data syncs with a custom Node.js/Express backend and MongoDB. On the frontend, I'm building the app in React Native with modular UI components, form validation, and real-time state updates. ShareIt also features early-stage escrow logic and a secure messaging system for renters and owners to coordinate transactions.",
@@ -113,7 +113,7 @@ function App() {
               }`}
             >
               <Col md={6} className={`d-flex justify-content-center ${index % 2 === 1 ? 'ps-md-5' : 'pe-md-5'} ${project.image2 ? 'stack-1000' : 'stack-768'}`}>
-                <div className="project-images mb-3">
+                <div className="project-images">
                   <Image
                     src={project.image}
                     alt={project.alt}
