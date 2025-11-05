@@ -22,6 +22,12 @@ footer p {
 .project-images {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .project-images {
+    flex-direction: row;
+  }
 }

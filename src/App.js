@@ -113,7 +113,7 @@ function App() {
               }`}
             >
               <Col md={6} className={`d-flex justify-content-center ${index % 2 === 1 ? 'ps-md-5' : 'pe-md-5'} ${project.image2 ? 'stack-1000' : 'stack-768'}`}>
-                <div className="project-images">
+                <div className="project-images mb-3">
                   <Image
                     src={project.image}
                     alt={project.alt}
