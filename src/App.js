@@ -7,13 +7,13 @@ const projects = [
     description:"A fully custom-built deep-learning system designed to allocate capital across major tech stocks like AAPL, MSFT, and NVDA. The model uses a transformer architecture trained to directly optimize the Sharpe ratio while minimizing overfitting. The full pipeline includes feature engineering with rolling statistics, volatility, and volume signals; a differentiable loss function that penalizes poor returns and excessive leverage; and walk-forward testing across rolling time windows. Training, validation, and backtesting are all GPU-accelerated, and over 1,000 hyperparameter combinations are tested through parallelized grid search. Final outputs include daily portfolio weights, performance visualizations, and backtest analytics compared to benchmarks. Achieved 2.6x six-year outperformance in backtesting when compared against an equal-weight benchmark.",
     image: `${process.env.PUBLIC_URL}/images/algo_trader.png`,
     alt: "Trader",
-    repoLink: "https://github.com/diegomontemayor123/transformer-based-portfolio-optimizer"},
+    repoLink: "https://github.com/diegomontemayor123/algo_trader"},
     {title: "Excel-Agent MCP Server",
     tech: "Machine Context Protocol (MCP), HuggingFace, LangChain, Retreival Augmented Generation (RAG), Facebook AI Similarity Search (FAISS), Optical Character Recognition (OCR)",
     description: "A MCP server implementing RAG pipelines with FAISS vector stores for intelligent Excel data extraction and querying. The system reduces manual data-entry time by ~90% through semantic search over structured context from unstructured sources, enabling natural language queries against financial datasets. Built with modular RAG components, efficient embedding caching, and context-aware retrieval strategies.",
     image: `${process.env.PUBLIC_URL}/images/algo_trader.png`,
     alt: "MCP",
-    repoLink: "https://github.com/diegomontemayor123/excel-agent-mcp-server"},
+    repoLink: "https://github.com/diegomontemayor123/excel-mcp"},
   {title: "LetsFeast – Social Recipe Sharing Platform",
     tech: "React Native, Node.js, MongoDB",
     description:"LetsFeast is a prototype full-stack mobile social platform for sharing and discovering user-generated recipes. The app supports likes, bookmarks, threaded comments, and direct messaging. I built the entire stack with a Node.js/Express backend (Joi validation, JWT auth, MongoDB), and a modular React Native frontend with image uploads, real-time feed filtering, and interactive UI components. Messaging includes push notifications, user avatars, and shared recipe previews via chat. Features like following, commenting, and personalized feeds encourage organic community engagement.",
@@ -32,7 +32,7 @@ const projects = [
     image: `${process.env.PUBLIC_URL}/images/share_it-portrait.png`,
     image2: `${process.env.PUBLIC_URL}/images/share_it_3-portrait.png`,
     alt: "ShareIt App",
-    repoLink: "https://github.com/diegomontemayor123/shareit-marketplace"
+    repoLink: "https://github.com/diegomontemayor123/shareit"
   }
 ]
 
@@ -83,6 +83,8 @@ function App() {return (<>
       <h3>{project.title}</h3>
       <p><strong>Tech Stack:</strong> {project.tech}</p>
       <p>{project.description}</p>
+
+      {/* Only show the GitHub link if it exists */}
       {project.repoLink && (
         <p>
           <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
