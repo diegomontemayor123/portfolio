@@ -9,7 +9,7 @@ const Box = ({icon,label,color,size='80px'}) => (
 );
 
 const Arrow=({direction='right',label})=>{
-  const s={width:direction==='down'?2:40,height:direction==='down'?40:2,background:'#6b7280',position:'relative',flexShrink:0,margin:direction==='down'?'0 auto':'0 8px'}
+  const s={width:direction==='down'?3:40,height:direction==='down'?20:3,background:'#6b7280',position:'relative',flexShrink:0,margin:direction==='down'?'0 auto':'0 8px'}
   const tip={position:'absolute',width:0,height:0}
   if(direction==='right')Object.assign(tip,{right:-6,top:'50%',transform:'translateY(-50%)',borderTop:'4px solid transparent',borderBottom:'4px solid transparent',borderLeft:'8px solid #6b7280'})
   if(direction==='left')Object.assign(tip,{left:-6,top:'50%',transform:'translateY(-50%)',borderTop:'4px solid transparent',borderBottom:'4px solid transparent',borderRight:'8px solid #6b7280'})
@@ -19,19 +19,10 @@ const Arrow=({direction='right',label})=>{
     <div style={{display:'flex',flexDirection:isDown?'column':'row',alignItems:'center',margin:isDown?'8px 0':'0 8px'}}>
       <div style={s}><div style={tip}/></div>
     </div>
-  )
-}
+  )}
 
 const MCPDiagram = () => (
-  <div style={{
-    padding:16,
-    background:'linear-gradient(135deg,#f8fafc,#e2e8f0)',
-    borderRadius:16,
-    boxShadow:'0 4px 12px rgba(0,0,0,0.15)',
-    maxWidth:600
-  }}>
-
-    {/* Input Row */}
+  <div style={{padding:16,background:'linear-gradient(135deg,#f8fafc,#e2e8f0)',borderRadius:16,boxShadow:'0 4px 12px rgba(0,0,0,0.15)',maxWidth:600}}>
     <div style={{textAlign:'left', fontWeight:500, fontSize:12, marginBottom:4, marginLeft:6, color:'#374151'}}>Input</div>
     <div style={{display:'flex', justifyContent:'space-between', flexWrap:'wrap', gap:8, marginBottom:8}}>
       <Box icon="📄" label="Excel" color="#2563eb" size="80px"/>
@@ -39,7 +30,6 @@ const MCPDiagram = () => (
       <Box icon="📑" label="PPT" color="#2563eb" size="80px"/>
       <Box icon="📝" label="Word" color="#2563eb" size="80px"/>
     </div>
-
     <Arrow direction="down" style={{margin:'4px 0'}}/>
     <div style={{textAlign:'left', fontWeight:500, fontSize:12, marginBottom:4, marginLeft:6, color:'#374151'}}>Parse & Extract</div>
     <div style={{display:'flex', justifyContent:'space-between', flexWrap:'wrap', gap:8, marginBottom:8}}>
@@ -48,7 +38,6 @@ const MCPDiagram = () => (
       <Box icon="👁️" label="OCR" color="#059669" size="80px"/>
       <Box icon="✂️" label="Chunk" color="#059669" size="80px"/>
     </div>
-
     <Arrow direction="down" style={{margin:'4px 0'}}/>
     <div style={{textAlign:'left', fontWeight:500, fontSize:12, marginBottom:4, marginLeft:6, color:'#374151'}}>Embed</div>
     <div style={{display:'flex', justifyContent:'space-between', flexWrap:'wrap', gap:8, marginBottom:8}}>
@@ -56,7 +45,6 @@ const MCPDiagram = () => (
       <Box icon="⚡" label="GPU Batch" color="#7c3aed" size="80px"/>
       <Box icon="💾" label="FAISS Store" color="#7c3aed" size="80px"/>
     </div>
-
     <Arrow direction="down" style={{margin:'4px 0'}}/>
     <div style={{textAlign:'left', fontWeight:500, fontSize:12, marginBottom:4, marginLeft:6, color:'#374151'}}>Query</div>
     <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', gap:8}}>
@@ -64,10 +52,8 @@ const MCPDiagram = () => (
       <Arrow direction="right" />
       <Box icon="📝" label="Excel Updates" color="#dc2626" size="80px"/>
     </div>
-
   </div>
 )
-
 
 const ZohoDiagram = () => (
   <div style={{padding:32,background:'linear-gradient(135deg,#f8fafc,#e2e8f0)',borderRadius:16,boxShadow:'0 4px 12px rgba(0,0,0,0.15)',maxWidth:600}}>
@@ -93,14 +79,14 @@ const ZohoDiagram = () => (
 
 const projects = [
     {title: "Transformer-Based Portfolio Optimizer",
-    tech: "PyTorch, Adam Optimizer, Python",
-    description:"A fully custom-built deep-learning system designed to allocate capital across major tech stocks like AAPL, MSFT, and NVDA. The model uses a transformer architecture trained to directly optimize the Sharpe ratio while minimizing overfitting. The full pipeline includes feature engineering with rolling statistics, volatility, and volume signals; a differentiable loss function that penalizes poor returns and excessive leverage; and walk-forward testing across rolling time windows. Training, validation, and backtesting are all GPU-accelerated, and over 1,000 hyperparameter combinations are tested through parallelized grid search. Final outputs include daily portfolio weights, performance visualizations, and backtest analytics compared to benchmarks. Achieved 2.6x outperformance in backtesting (2016 - 2023) when compared against an equal-weight benchmark, all while maintaining a 25% smaller maximum drawdown.",
+    tech: "PyTorch, Adam Optimizer, RandomForest",
+    description:"A fully custom-built deep-learning system designed to allocate capital across major blue-chip stocks like AAPL, JPM, and NVDA. The model uses sequence-to-sequence transformer architecture trained to directly optimize the Sharpe ratio while minimizing overfitting. The full pipeline includes recursive feature selection using Random Forest to reduce dimensionality; a differentiable loss function that penalizes poor returns and excessive leverage; and walk-forward testing across rolling time windows. Training, validation, and backtesting are all GPU-accelerated, and over 1,000 hyperparameter combinations are tested through parallelized grid search. Final outputs include daily portfolio weights, performance visualizations, and backtest analytics compared to benchmarks. Achieved 2.6x outperformance in backtesting (2017 - 2023) when compared against an equal-weight benchmark, all while maintaining a 25% smaller maximum drawdown.",
     image: `${process.env.PUBLIC_URL}/images/algo_trader.png`,
     alt: "Trader",
     repoLink: "https://github.com/diegomontemayor123/algo_trader"},
     {title: "Excel-Agent MCP Server",
-    tech: "Machine Context Protocol (MCP), HuggingFace, LangChain, Retreival Augmented Generation (RAG), Facebook AI Similarity Search (FAISS), Optical Character Recognition (OCR)",
-    description: "A MCP server implementing RAG pipelines with FAISS vector stores for intelligent Excel data extraction and querying. The system reduces manual data-entry time by ~90% through semantic search over structured context from unstructured sources, enabling natural language queries against financial datasets. Built with modular RAG components, efficient embedding caching, and context-aware retrieval strategies.",
+    tech: "HuggingFace, LangChain, Retreival Augmented Generation (RAG)",
+    description: "Machine Context Protocol (MCP) server implementing RAG pipelines with Facebook AI Similarity Search (FAISS) vector stores for intelligent Excel data extraction and querying. Includes hybrid extraction pipeline combining rule-based table detection with OCR fallback, as well as adaptive chunking to preserve semantic structure across boundaries. The system reduces manual data-entry time by ~90% through semantic search over structured context from unstructured sources, enabling natural language queries against financial datasets. Built with modular RAG components and efficient embedding caching.",
     customContent: <MCPDiagram />,
     alt: "MCP",
     repoLink: "https://github.com/diegomontemayor123/excel_mcp"},
@@ -152,8 +138,7 @@ function App() {return (<>
             <Col md={10} lg={10} className="text-center">
 
 <p>I'm a self-taught Full-Stack Engineer and AI researcher, and a former Vice President in Structured Credit investing on Wall Street. I leverage my background in both high-stakes finance and technology to design AI systems that solve real-world problems with precision and reliability. A graduate of Yale University, I bring a pragmatic, problem-solving mindset to every project, focusing on scalable, efficient systems that automate complex workflows.</p>
-<p>I've built transformer-based models leveraging PyTorch and RandomForest for portfolio optimization, RAG (retrieval-augmented generation) pipelines using FAISS vector stores, and full-stack mobile applications. I'm particularly passionate about creating AI systems that prioritize accuracy, transparency, and performance, with a strong emphasis on reducing hallucinations and ensuring factual grounding—especially in high-stakes fields like finance.</p>
-<p>My research interests lie at the intersection of AI and practical applications, including adaptive retrieval systems, context-aware factual grounding, and efficient context compression. I'm committed to designing systems that balance cutting-edge innovation with rigorous verification and real-world accuracy. My goal is to push the boundaries of AI while ensuring that the solutions I develop remain trustworthy, scalable, and transparent.</p>
+<p>I've built transformer-based models leveraging PyTorch and RandomForest for portfolio optimization, RAG (retrieval-augmented generation) pipelines using FAISS vector stores, and full-stack mobile applications. My research interests lie at the intersection of AI and practical applications, including adaptive retrieval systems, context-aware factual grounding, and efficient context compression. I'm committed to designing systems that balance cutting-edge innovation with rigorous verification and real-world accuracy. My goal is to push the boundaries of AI while ensuring that the solutions I develop remain trustworthy, scalable, and transparent.</p>
 
  <p><a href={`${process.env.PUBLIC_URL}/images/Montemayor_Diego_CV.pdf`} target="_blank" rel="noopener noreferrer" style={{ fontWeight: '600', color: '#007bff', textDecoration: 'underline' }}>
                   Download my Resume (PDF)</a></p></Col></Row></Container>
