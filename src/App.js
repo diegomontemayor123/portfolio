@@ -13,7 +13,7 @@ const projects = [
     description: "A MCP server implementing RAG pipelines with FAISS vector stores for intelligent Excel data extraction and querying. The system reduces manual data-entry time by ~90% through semantic search over structured context from unstructured sources, enabling natural language queries against financial datasets. Built with modular RAG components, efficient embedding caching, and context-aware retrieval strategies.",
     image: `${process.env.PUBLIC_URL}/images/algo_trader.png`,
     alt: "MCP",
-    repoLink: "https://github.com/diegomontemayor123/excel-mcp"},
+    repoLink: "https://github.com/diegomontemayor123/excel_mcp"},
   {title: "LetsFeast – Social Recipe Sharing Platform",
     tech: "React Native, Node.js, MongoDB",
     description:"LetsFeast is a prototype full-stack mobile social platform for sharing and discovering user-generated recipes. The app supports likes, bookmarks, threaded comments, and direct messaging. I built the entire stack with a Node.js/Express backend (Joi validation, JWT auth, MongoDB), and a modular React Native frontend with image uploads, real-time feed filtering, and interactive UI components. Messaging includes push notifications, user avatars, and shared recipe previews via chat. Features like following, commenting, and personalized feeds encourage organic community engagement.",
