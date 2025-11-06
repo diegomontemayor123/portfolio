@@ -9,49 +9,62 @@ const Box = ({icon,label,color,size='80px'}) => (
 );
 
 const Arrow=({direction='right',label})=>{
-  const s={width:direction==='down'?2:40,height:direction==='down'?30:2,background:'#6b7280',position:'relative',flexShrink:0,margin:direction==='down'?'0 auto':'0 8px'}
+  const s={width:direction==='down'?2:40,height:direction==='down'?40:2,background:'#6b7280',position:'relative',flexShrink:0,margin:direction==='down'?'0 auto':'0 8px'}
   const tip={position:'absolute',width:0,height:0}
-  if(direction==='right')Object.assign(tip,{right:-6,top:-4,borderTop:'4px solid transparent',borderBottom:'4px solid transparent',borderLeft:'8px solid #6b7280'})
-  if(direction==='left')Object.assign(tip,{left:-6,top:-4,borderTop:'4px solid transparent',borderBottom:'4px solid transparent',borderRight:'8px solid #6b7280'})
-  if(direction==='down')Object.assign(tip,{bottom:-8,left:-3,borderLeft:'4px solid transparent',borderRight:'4px solid transparent',borderTop:'8px solid #6b7280'})
+  if(direction==='right')Object.assign(tip,{right:-6,top:'50%',transform:'translateY(-50%)',borderTop:'4px solid transparent',borderBottom:'4px solid transparent',borderLeft:'8px solid #6b7280'})
+  if(direction==='left')Object.assign(tip,{left:-6,top:'50%',transform:'translateY(-50%)',borderTop:'4px solid transparent',borderBottom:'4px solid transparent',borderRight:'8px solid #6b7280'})
+  if(direction==='down')Object.assign(tip,{bottom:-6,left:'50%',transform:'translateX(-50%)',borderLeft:'4px solid transparent',borderRight:'4px solid transparent',borderTop:'8px solid #6b7280'})
   const isDown=direction==='down'
   return(
     <div style={{display:'flex',flexDirection:isDown?'column':'row',alignItems:'center',margin:isDown?'8px 0':'0 8px'}}>
       <div style={s}><div style={tip}/></div>
-      {label&&<div style={{fontSize:10,color:'#475569',fontWeight:600,margin:isDown?'4px 0 0 0':'0 0 0 4px',textAlign:'center'}}>{label}</div>}
     </div>
   )
 }
 
-const MCPDiagram=()=>( 
-  <div style={{p:32,background:'linear-gradient(135deg,#f8fafc,#e2e8f0)',borderRadius:16,boxShadow:'0 4px 12px rgba(0,0,0,0.15)',maxWidth:600}}>
-    <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:8,mb:16}}>
-      <div style={{fontWeight:700,color:'#334155',width:70,textAlign:'right'}}>Input</div>
-      <div style={{display:'flex',gap:12,alignItems:'center',justifyContent:'center'}}>
-        <Box icon="📄" label="Excel" color="#2563eb"/><Box icon="📊" label="PDF" color="#2563eb"/><Box icon="📑" label="PPT" color="#2563eb"/><Box icon="📝" label="Word" color="#2563eb"/>
-      </div>
+const MCPDiagram = () => (
+  <div style={{
+    padding:16,
+    background:'linear-gradient(135deg,#f8fafc,#e2e8f0)',
+    borderRadius:16,
+    boxShadow:'0 4px 12px rgba(0,0,0,0.15)',
+    maxWidth:600
+  }}>
+
+    {/* Input Row */}
+    <div style={{textAlign:'left', fontWeight:500, fontSize:12, marginBottom:4, marginLeft:6, color:'#374151'}}>Input</div>
+    <div style={{display:'flex', justifyContent:'space-between', flexWrap:'wrap', gap:8, marginBottom:8}}>
+      <Box icon="📄" label="Excel" color="#2563eb" size="80px"/>
+      <Box icon="📊" label="PDF" color="#2563eb" size="80px"/>
+      <Box icon="📑" label="PPT" color="#2563eb" size="80px"/>
+      <Box icon="📝" label="Word" color="#2563eb" size="80px"/>
     </div>
-    <Arrow direction="down" label="Parse & Extract"/>
-    <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:8,mt:8}}>
-      <div style={{fontWeight:700,color:'#334155',width:70,textAlign:'right'}}>Processing</div>
-      <div style={{display:'flex',gap:12,alignItems:'center',justifyContent:'center'}}>
-        <Box icon="🔍" label="Parse" color="#059669" size="90px"/><Box icon="📐" label="Table Detect" color="#059669" size="90px"/><Box icon="👁️" label="OCR" color="#059669" size="90px"/><Box icon="✂️" label="Chunk 4k" color="#059669" size="90px"/>
-      </div>
+
+    <Arrow direction="down" style={{margin:'4px 0'}}/>
+    <div style={{textAlign:'left', fontWeight:500, fontSize:12, marginBottom:4, marginLeft:6, color:'#374151'}}>Parse & Extract</div>
+    <div style={{display:'flex', justifyContent:'space-between', flexWrap:'wrap', gap:8, marginBottom:8}}>
+      <Box icon="🔍" label="Parse" color="#059669" size="80px"/>
+      <Box icon="📐" label="Table Detect" color="#059669" size="80px"/>
+      <Box icon="👁️" label="OCR" color="#059669" size="80px"/>
+      <Box icon="✂️" label="Chunk" color="#059669" size="80px"/>
     </div>
-    <Arrow direction="down" label="Embed"/>
-    <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:8,mt:8}}>
-      <div style={{fontWeight:700,color:'#334155',width:70,textAlign:'right'}}>Vectorization</div>
-      <div style={{display:'flex',gap:12,alignItems:'center',justifyContent:'center'}}>
-        <Box icon="🧠" label="BGE Embed" color="#7c3aed" size="100px"/><Box icon="⚡" label="GPU Batch" color="#7c3aed" size="100px"/><Box icon="💾" label="FAISS Store" color="#7c3aed" size="100px"/>
-      </div>
+
+    <Arrow direction="down" style={{margin:'4px 0'}}/>
+    <div style={{textAlign:'left', fontWeight:500, fontSize:12, marginBottom:4, marginLeft:6, color:'#374151'}}>Embed</div>
+    <div style={{display:'flex', justifyContent:'space-between', flexWrap:'wrap', gap:8, marginBottom:8}}>
+      <Box icon="🧠" label="Embed Locally" color="#7c3aed" size="80px"/>
+      <Box icon="⚡" label="GPU Batch" color="#7c3aed" size="80px"/>
+      <Box icon="💾" label="FAISS Store" color="#7c3aed" size="80px"/>
     </div>
-    <Arrow direction="down" label="Query"/>
-    <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:8,mt:8}}>
-      <div style={{fontWeight:700,color:'#334155',width:70,textAlign:'right'}}>Output</div>
-      <div style={{display:'flex',gap:12,alignItems:'center',justifyContent:'center'}}>
-        <Box icon="🔎" label="Semantic Search" color="#dc2626" size="110px"/><Box icon="📝" label="Excel Updates" color="#dc2626" size="110px"/>
-      </div>
+
+    <Arrow direction="down" style={{margin:'4px 0'}}/>
+    <div style={{textAlign:'left', fontWeight:500, fontSize:12, marginBottom:4, marginLeft:6, color:'#374151'}}>Query</div>
+    <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', gap:8}}>
+      <Box icon="🔎" label="Semantic Search" color="#dc2626" size="80px"/>
+      <Arrow direction="right" />
+      <Box icon="📝" label="Excel Updates" color="#dc2626" size="80px"/>
     </div>
+
   </div>
 )
 
@@ -81,7 +94,7 @@ const ZohoDiagram = () => (
 const projects = [
     {title: "Transformer-Based Portfolio Optimizer",
     tech: "PyTorch, Adam Optimizer, Python",
-    description:"A fully custom-built deep-learning system designed to allocate capital across major tech stocks like AAPL, MSFT, and NVDA. The model uses a transformer architecture trained to directly optimize the Sharpe ratio while minimizing overfitting. The full pipeline includes feature engineering with rolling statistics, volatility, and volume signals; a differentiable loss function that penalizes poor returns and excessive leverage; and walk-forward testing across rolling time windows. Training, validation, and backtesting are all GPU-accelerated, and over 1,000 hyperparameter combinations are tested through parallelized grid search. Final outputs include daily portfolio weights, performance visualizations, and backtest analytics compared to benchmarks. Achieved 2.6x six-year outperformance in backtesting when compared against an equal-weight benchmark, all while maintaining a 25% smallr maximum drawdown.",
+    description:"A fully custom-built deep-learning system designed to allocate capital across major tech stocks like AAPL, MSFT, and NVDA. The model uses a transformer architecture trained to directly optimize the Sharpe ratio while minimizing overfitting. The full pipeline includes feature engineering with rolling statistics, volatility, and volume signals; a differentiable loss function that penalizes poor returns and excessive leverage; and walk-forward testing across rolling time windows. Training, validation, and backtesting are all GPU-accelerated, and over 1,000 hyperparameter combinations are tested through parallelized grid search. Final outputs include daily portfolio weights, performance visualizations, and backtest analytics compared to benchmarks. Achieved 2.6x outperformance in backtesting (2016 - 2023) when compared against an equal-weight benchmark, all while maintaining a 25% smaller maximum drawdown.",
     image: `${process.env.PUBLIC_URL}/images/algo_trader.png`,
     alt: "Trader",
     repoLink: "https://github.com/diegomontemayor123/algo_trader"},
@@ -128,7 +141,8 @@ function App() {return (<>
 
       <header className="bg-gradient pt-5 pb-2 text-center text-black"><Container>
         <h1 className="display-4">Hi, I'm Diego</h1>
-        <p className="lead">AI Research Engineer | Retrieval & Transformer Systems | Ex–Wall Street VP, Yale Econ (Distinction)</p>
+        <p className="lead">AI Research & Full-Stack Engineer | Ex–Wall Street VP, Yale Econ (Distinction)
+</p>
       </Container></header>
 
       <section id="about" className="py-5">
@@ -139,7 +153,7 @@ function App() {return (<>
 
 <p>I'm a self-taught Full-Stack Engineer and AI researcher, and a former Vice President in Structured Credit investing on Wall Street. I leverage my background in both high-stakes finance and technology to design AI systems that solve real-world problems with precision and reliability. A graduate of Yale University, I bring a pragmatic, problem-solving mindset to every project, focusing on scalable, efficient systems that automate complex workflows.</p>
 <p>I've built transformer-based models leveraging PyTorch and RandomForest for portfolio optimization, RAG (retrieval-augmented generation) pipelines using FAISS vector stores, and full-stack mobile applications. I'm particularly passionate about creating AI systems that prioritize accuracy, transparency, and performance, with a strong emphasis on reducing hallucinations and ensuring factual grounding—especially in high-stakes fields like finance.</p>
-<p>My research interests lie at the intersection of AI and practical applications, including adaptive retrieval systems, context-aware factual grounding, and efficient context compression. In the world of finance—where inaccuracies can be costly, I'm committed to designing systems that balance cutting-edge innovation with rigorous verification and real-world accuracy. My goal is to push the boundaries of AI while ensuring that the solutions I develop remain trustworthy, scalable, and transparent.</p>
+<p>My research interests lie at the intersection of AI and practical applications, including adaptive retrieval systems, context-aware factual grounding, and efficient context compression. I'm committed to designing systems that balance cutting-edge innovation with rigorous verification and real-world accuracy. My goal is to push the boundaries of AI while ensuring that the solutions I develop remain trustworthy, scalable, and transparent.</p>
 
  <p><a href={`${process.env.PUBLIC_URL}/images/Montemayor_Diego_CV.pdf`} target="_blank" rel="noopener noreferrer" style={{ fontWeight: '600', color: '#007bff', textDecoration: 'underline' }}>
                   Download my Resume (PDF)</a></p></Col></Row></Container>
