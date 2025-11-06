@@ -14,13 +14,15 @@ const Arrow=({direction='right',label})=>{
   if(direction==='right')Object.assign(tip,{right:-6,top:-4,borderTop:'4px solid transparent',borderBottom:'4px solid transparent',borderLeft:'8px solid #6b7280'})
   if(direction==='left')Object.assign(tip,{left:-6,top:-4,borderTop:'4px solid transparent',borderBottom:'4px solid transparent',borderRight:'8px solid #6b7280'})
   if(direction==='down')Object.assign(tip,{bottom:-8,left:-3,borderLeft:'4px solid transparent',borderRight:'4px solid transparent',borderTop:'8px solid #6b7280'})
+  const isDown=direction==='down'
   return(
-    <div style={{display:'flex',flexDirection:'column',alignItems:'center',margin:'8px 0'}}>
+    <div style={{display:'flex',flexDirection:isDown?'column':'row',alignItems:'center',margin:isDown?'8px 0':'0 8px'}}>
       <div style={s}><div style={tip}/></div>
-      {label&&<div style={{fontSize:10,color:'#475569',fontWeight:600,marginTop:4,textAlign:'center'}}>{label}</div>}
+      {label&&<div style={{fontSize:10,color:'#475569',fontWeight:600,margin:isDown?'4px 0 0 0':'0 0 0 4px',textAlign:'center'}}>{label}</div>}
     </div>
   )
 }
+
 
 
 const MCPDiagram=()=>(
@@ -49,7 +51,6 @@ const MCPDiagram=()=>(
     <div style={{display:'flex',gap:12,alignItems:'center',justifyContent:'center'}}>
       <Box icon="🔎" label="Semantic Search" color="#dc2626" size="110px"/><Box icon="📝" label="Excel Updates" color="#dc2626" size="110px"/>
     </div>
-    <div style={{mt:20,p:12,background:'#f1f5f9',borderRadius:12,fontSize:11,color:'#475569',textAlign:'center'}}><b>MCP Server</b> • 20 workers • Parallel processing • Context-aware retrieval</div>
   </div>
 )
 
