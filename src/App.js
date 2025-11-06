@@ -23,33 +23,34 @@ const Arrow=({direction='right',label})=>{
   )
 }
 
-
-
-const MCPDiagram=()=>(
+const MCPDiagram=()=>( 
   <div style={{p:32,background:'linear-gradient(135deg,#f8fafc,#e2e8f0)',borderRadius:16,boxShadow:'0 4px 12px rgba(0,0,0,0.15)',maxWidth:600}}>
-    <div style={{fontSize:20,fontWeight:800,color:'#1e293b',mb:24,textAlign:'center'}}>Document Processing Pipeline</div>
-    
-    <div style={{textAlign:'center',fontWeight:700,color:'#334155',marginBottom:8}}>Input</div>
-    <div style={{display:'flex',gap:12,alignItems:'center',justifyContent:'center',mb:20}}>
-      <Box icon="📄" label="Excel" color="#2563eb"/><Box icon="📊" label="PDF" color="#2563eb"/><Box icon="📑" label="PPT" color="#2563eb"/><Box icon="📝" label="Word" color="#2563eb"/>
+    <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:8,mb:16}}>
+      <div style={{fontWeight:700,color:'#334155',width:70,textAlign:'right'}}>Input</div>
+      <div style={{display:'flex',gap:12,alignItems:'center',justifyContent:'center'}}>
+        <Box icon="📄" label="Excel" color="#2563eb"/><Box icon="📊" label="PDF" color="#2563eb"/><Box icon="📑" label="PPT" color="#2563eb"/><Box icon="📝" label="Word" color="#2563eb"/>
+      </div>
     </div>
     <Arrow direction="down" label="Parse & Extract"/>
-    
-    <div style={{textAlign:'center',fontWeight:700,color:'#334155',margin:'12px 0 8px'}}>Processing</div>
-    <div style={{display:'flex',gap:12,alignItems:'center',justifyContent:'center',mb:20}}>
-      <Box icon="🔍" label="Parse" color="#059669" size="90px"/><Box icon="📐" label="Table Detect" color="#059669" size="90px"/><Box icon="👁️" label="OCR" color="#059669" size="90px"/><Box icon="✂️" label="Chunk 4k" color="#059669" size="90px"/>
+    <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:8,mt:8}}>
+      <div style={{fontWeight:700,color:'#334155',width:70,textAlign:'right'}}>Processing</div>
+      <div style={{display:'flex',gap:12,alignItems:'center',justifyContent:'center'}}>
+        <Box icon="🔍" label="Parse" color="#059669" size="90px"/><Box icon="📐" label="Table Detect" color="#059669" size="90px"/><Box icon="👁️" label="OCR" color="#059669" size="90px"/><Box icon="✂️" label="Chunk 4k" color="#059669" size="90px"/>
+      </div>
     </div>
     <Arrow direction="down" label="Embed"/>
-    
-    <div style={{textAlign:'center',fontWeight:700,color:'#334155',margin:'12px 0 8px'}}>Vectorization</div>
-    <div style={{display:'flex',gap:12,alignItems:'center',justifyContent:'center',mb:20}}>
-      <Box icon="🧠" label="BGE Embed" color="#7c3aed" size="100px"/><Box icon="⚡" label="GPU Batch" color="#7c3aed" size="100px"/><Box icon="💾" label="FAISS Store" color="#7c3aed" size="100px"/>
+    <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:8,mt:8}}>
+      <div style={{fontWeight:700,color:'#334155',width:70,textAlign:'right'}}>Vectorization</div>
+      <div style={{display:'flex',gap:12,alignItems:'center',justifyContent:'center'}}>
+        <Box icon="🧠" label="BGE Embed" color="#7c3aed" size="100px"/><Box icon="⚡" label="GPU Batch" color="#7c3aed" size="100px"/><Box icon="💾" label="FAISS Store" color="#7c3aed" size="100px"/>
+      </div>
     </div>
     <Arrow direction="down" label="Query"/>
-    
-    <div style={{textAlign:'center',fontWeight:700,color:'#334155',margin:'12px 0 8px'}}>Output</div>
-    <div style={{display:'flex',gap:12,alignItems:'center',justifyContent:'center'}}>
-      <Box icon="🔎" label="Semantic Search" color="#dc2626" size="110px"/><Box icon="📝" label="Excel Updates" color="#dc2626" size="110px"/>
+    <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:8,mt:8}}>
+      <div style={{fontWeight:700,color:'#334155',width:70,textAlign:'right'}}>Output</div>
+      <div style={{display:'flex',gap:12,alignItems:'center',justifyContent:'center'}}>
+        <Box icon="🔎" label="Semantic Search" color="#dc2626" size="110px"/><Box icon="📝" label="Excel Updates" color="#dc2626" size="110px"/>
+      </div>
     </div>
   </div>
 )
