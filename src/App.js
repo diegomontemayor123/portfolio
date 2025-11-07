@@ -57,9 +57,9 @@ const MCPDiagram = () => (
     <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', gap:8}}>
 
       {/* Boxes */}
-      <Box icon="🔎" label="Semantic Search" color="#dc2626" size="80px"/>
+      <Box icon="🔎" label="Semantic Search" color="#f59e0b" size="80px"/>
       <Arrow direction="right" />
-      <Box icon="📝" label="Excel Updates" color="#dc2626" size="80px"/>
+      <Box icon="📝" label="Excel Updates" color="#f59e0b" size="80px"/>
     </div>
   </div>
 );
