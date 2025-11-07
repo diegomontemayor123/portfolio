@@ -77,18 +77,18 @@ const ZohoDiagram = () => (
 );
 
 const projects = [
-    {title: "Transformer-Based Portfolio Optimizer",
-    tech: "PyTorch, Adam Optimizer, RandomForest",
-    description:"A fully custom-built deep-learning system designed to allocate capital across major blue-chip stocks like AAPL, JPM, and NVDA. The model uses a sequence-to-sequence transformer trained to directly optimize the Sharpe ratio while minimizing overfitting. The full pipeline includes recursive feature selection using Random Forest to reduce dimensionality; a differentiable loss function that penalizes poor returns and excessive leverage; and walk-forward testing across rolling time windows. Training, validation, and backtesting are all GPU-accelerated, and over 1,000 hyperparameter combinations are tested through parallelized grid search. Final outputs include daily portfolio weights, performance visualizations, and backtest analytics compared to benchmarks. Achieved 2.6x outperformance in backtesting (2017 - 2023) when compared against an equal-weight benchmark, all while maintaining a 25% smaller maximum drawdown.",
-    image: `${process.env.PUBLIC_URL}/images/algo_trader.png`,
-    alt: "Trader",
-    repoLink: "https://github.com/diegomontemayor123/algo_trader"},
-    {title: "Excel-Agent MCP Server",
+      {title: "Excel-Agent MCP Server",
     tech: "HuggingFace, LangChain, Retreival Augmented Generation (RAG)",
     description: "Machine Context Protocol (MCP) server implementing RAG pipelines with Facebook AI Similarity Search (FAISS) vector stores for intelligent Excel data extraction and querying. Includes hybrid extraction pipeline combining rule-based table detection with OCR fallback, as well as adaptive chunking to preserve semantic structure across boundaries. The system reduces manual data-entry time by ~90% through semantic search over structured context from unstructured sources, enabling natural language queries against financial datasets. Built with modular RAG components and efficient embedding caching.",
     customContent: <MCPDiagram />,
     alt: "MCP",
-    repoLink: "https://github.com/diegomontemayor123/excel_mcp"},
+    repoLink: "https://github.com/diegomontemayor123/excel_mcp"},  
+  {title: "Transformer-Based Portfolio Optimizer",
+    tech: "PyTorch, Adam Optimizer, RandomForest",
+    description:"A fully custom-built deep-learning system designed to allocate capital across major blue-chip stocks like AAPL, JPM, and NVDA. The model uses a sequence-to-sequence transformer trained to directly optimize the Sharpe ratio while minimizing overfitting. The full pipeline includes recursive feature selection using Random Forest to reduce dimensionality; a differentiable loss function that penalizes poor returns and excessive leverage; and walk-forward testing across rolling time windows. Training, validation, and backtesting are all GPU-accelerated, and over 1,000 hyperparameter combinations are tested through parallelized grid search. Final outputs include daily portfolio weights, performance visualizations, and backtest analytics compared to benchmarks. Achieved 2.6x outperformance in simulated backtesting (2017 - 2023) when compared against an equal-weight benchmark, all while maintaining a 25% smaller maximum drawdown.",
+    image: `${process.env.PUBLIC_URL}/images/algo_trader.png`,
+    alt: "Trader",
+    repoLink: "https://github.com/diegomontemayor123/algo_trader"},
   {title: "LetsFeast – Social Recipe Sharing Platform",
     tech: "React Native, Node.js, MongoDB",
     description:"LetsFeast is a prototype full-stack mobile social platform for sharing and discovering user-generated recipes. The app supports likes, bookmarks, threaded comments, and direct messaging. I built the entire stack with a Node.js/Express backend (Joi validation, JWT auth, MongoDB), and a modular React Native frontend with image uploads, real-time feed filtering, and interactive UI components. Messaging includes push notifications, user avatars, and shared recipe previews via chat. Features like following, commenting, and personalized feeds encourage organic community engagement.",
@@ -125,7 +125,7 @@ function App() {return (<>
             </Nav></Navbar.Collapse></Container></Navbar>
       <header className="bg-gradient pt-5 pb-2 text-center text-black"><Container>
         <h1 className="display-4">Hi, I'm Diego</h1>
-        <p className="lead">AI Researcher & Full-Stack Engineer | Ex–Wall Street VP | Yale Economics (Distinction)
+        <p className="lead">AI Engineer & Entrepreneur | Ex–Wall Street VP | Yale Economics (Distinction)
 </p>
       </Container></header>
       <section id="about" className="py-5">
