@@ -79,7 +79,7 @@ const ZohoDiagram = () => (
 const projects = [
       {title: "Excel-Agent MCP Server",
     tech: "HuggingFace, LangChain, Retreival Augmented Generation (RAG)",
-    description: "Model Context Protocol (MCP) server implementing RAG pipelines with Facebook AI Similarity Search (FAISS) vector stores for intelligent Excel data extraction and querying. Includes hybrid extraction pipeline combining rule-based table detection with OCR fallback, as well as adaptive chunking to preserve semantic structure across boundaries. The system significantly reduces manual data-entry time through semantic search over structured context from unstructured sources, enabling natural language queries against financial datasets. Built with modular RAG components and efficient embedding caching.",
+    description: "Model Context Protocol (MCP) server implementing RAG pipelines with FAISS vector stores for intelligent Excel data extraction and querying. Includes hybrid extraction pipeline combining rule-based table detection with OCR fallback, as well as adaptive chunking to preserve semantic structure across boundaries. The system significantly reduces manual data-entry time through semantic search over structured context from unstructured sources, enabling natural language queries against financial datasets. Built with modular RAG components and efficient embedding caching.",
     customContent: <MCPDiagram />,
     alt: "MCP",
     repoLink: "https://github.com/diegomontemayor123/excel_mcp"},  
