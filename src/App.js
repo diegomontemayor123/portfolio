@@ -59,13 +59,13 @@ const MCPDiagram = () => (
       {/* Boxes */}
       <Box icon="🔎" label="Semantic Search" color="#f59e0b" size="80px"/>
       <Arrow direction="right" />
-      <Box icon="📝" label="Excel Updates" color="#f59e0b" size="80px"/>
+      <Box icon="📝" label="Excel" color="#f59e0b" size="80px"/>
     </div>
   </div>
 );
 
 const ZohoDiagram = () => (
-  <div style={{padding: 32,background: 'linear-gradient(135deg,#f8fafc,#e2e8f0)',borderRadius: 16,boxShadow: '0 4px 12px rgba(0,0,0,0.15)',width: '100%',   maxWidth: '100%', boxSizing: 'border-box' }}>
+  <div style={{padding: 16,background: 'linear-gradient(135deg,#f8fafc,#e2e8f0)',borderRadius: 16,boxShadow: '0 4px 12px rgba(0,0,0,0.15)',width: '100%',   maxWidth: '100%', boxSizing: 'border-box' }}>
     <h4 style={{textAlign: 'center', fontSize:16, fontWeight: 600, color: '#374151', marginBottom: 16}}>Automated Invoicing and CRM Workflow</h4>
     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16}}>
       <Box icon="📅" label="Calendar" color="#3b82f6"/>
