@@ -23,8 +23,11 @@ const Arrow=({direction='right',label})=>{
 
 const MCPDiagram = () => (
   <div style={{padding:16,background:'linear-gradient(135deg,#f8fafc,#e2e8f0)',borderRadius:16,boxShadow:'0 4px 12px rgba(0,0,0,0.15)',maxWidth:600}}>
+    <h4 style={{textAlign: 'center', fontSize: 16, fontWeight: 600, color: '#374151', marginBottom: 16}}>Excel-Agent MCP Workflow</h4>
     <div style={{textAlign:'left', fontWeight:500, fontSize:12, marginBottom:4, marginLeft:6, color:'#374151'}}>Input</div>
     <div style={{display:'flex', justifyContent:'space-between', flexWrap:'wrap', gap:8, marginBottom:8}}>
+
+      {/* Boxes */}
       <Box icon="📄" label="Excel" color="#2563eb" size="80px"/>
       <Box icon="📊" label="PDF" color="#2563eb" size="80px"/>
       <Box icon="📑" label="PPT" color="#2563eb" size="80px"/>
@@ -33,6 +36,8 @@ const MCPDiagram = () => (
     <Arrow direction="down" style={{margin:'4px 0'}}/>
     <div style={{textAlign:'left', fontWeight:500, fontSize:12, marginBottom:4, marginLeft:6, color:'#374151'}}>Parse & Extract</div>
     <div style={{display:'flex', justifyContent:'space-between', flexWrap:'wrap', gap:8, marginBottom:8}}>
+
+      {/* Boxes */}
       <Box icon="🔍" label="Parse" color="#059669" size="80px"/>
       <Box icon="📐" label="Table Detect" color="#059669" size="80px"/>
       <Box icon="👁️" label="OCR" color="#059669" size="80px"/>
@@ -41,23 +46,37 @@ const MCPDiagram = () => (
     <Arrow direction="down" style={{margin:'4px 0'}}/>
     <div style={{textAlign:'left', fontWeight:500, fontSize:12, marginBottom:4, marginLeft:6, color:'#374151'}}>Embed</div>
     <div style={{display:'flex', justifyContent:'space-between', flexWrap:'wrap', gap:8, marginBottom:8}}>
-      <Box icon="🧠" label="Embed Locally" color="#7c3aed" size="80px"/>
-      <Box icon="⚡" label="GPU Batch" color="#7c3aed" size="80px"/>
+
+      {/* Boxes */}
+      <Box icon="⚡" label="Local Embed" color="#7c3aed" size="80px"/>
+      <Box icon="🧠" label="GPU Batch" color="#7c3aed" size="80px"/>
       <Box icon="💾" label="FAISS Store" color="#7c3aed" size="80px"/>
     </div>
     <Arrow direction="down" style={{margin:'4px 0'}}/>
     <div style={{textAlign:'left', fontWeight:500, fontSize:12, marginBottom:4, marginLeft:6, color:'#374151'}}>Query</div>
     <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', gap:8}}>
+
+      {/* Boxes */}
       <Box icon="🔎" label="Semantic Search" color="#dc2626" size="80px"/>
       <Arrow direction="right" />
       <Box icon="📝" label="Excel Updates" color="#dc2626" size="80px"/>
     </div>
   </div>
-)
+);
 
 const ZohoDiagram = () => (
-  <div style={{padding:32,background:'linear-gradient(135deg,#f8fafc,#e2e8f0)',borderRadius:16,boxShadow:'0 4px 12px rgba(0,0,0,0.15)',maxWidth:600}}>
-    <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:8,marginBottom:16}}>
+  <div style={{
+    padding: 32,
+    background: 'linear-gradient(135deg,#f8fafc,#e2e8f0)',
+    borderRadius: 16,
+    boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+    width: '100%',   
+    maxWidth: '100%', 
+    boxSizing: 'border-box' 
+  }}>
+    <h4 style={{textAlign: 'center', fontSize:16, fontWeight: 600, color: '#374151', marginBottom: 16}}>Automated Invoicing and CRM Workflow</h4>
+    
+    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginBottom: 16}}>
       <Box icon="📅" label="Calendar" color="#3b82f6"/>
       <Arrow/>
       <Box icon="</>" label="Script" color="#10b981"/>
@@ -66,8 +85,8 @@ const ZohoDiagram = () => (
       <Arrow/>
       <Box icon="👤" label="User" color="#f59e0b"/>
     </div>
-    
-    <div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:8,flexDirection:'row-reverse'}}>
+
+    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, flexDirection: 'row-reverse'}}>
       <Box icon="📧" label="Email" color="#8b5cf6"/>
       <Arrow direction="left"/>
       <Box icon="🧾" label="Invoice" color="#dc2626"/>
@@ -76,6 +95,8 @@ const ZohoDiagram = () => (
     </div>
   </div>
 );
+
+
 
 const projects = [
     {title: "Transformer-Based Portfolio Optimizer",
@@ -185,9 +206,9 @@ function App() {return (<>
           <h2 className="text-center mb-4">Contact</h2>
           <Row className="justify-content-center">
             <Col md={6} className="text-center">
-              <p>Email: <a href="mailto:diegomontemayor.f@gmail.com">diegomontemayor.f@gmail.com</a></p>
-              <p>GitHub: <a href="https://github.com/diegomontemayor123" target="_blank" rel="noreferrer">github.com/diegomontemayor123</a></p>
-              <p>LinkedIn: <a href="https://linkedin.com/in/diego-montemayor-6589132b6" target="_blank" rel="noreferrer">linkedin.com/in/diego-montemayor-6589132b6</a></p>
+              <p><a href="mailto:diegomontemayor.f@gmail.com">E-Mail</a></p>
+              <p><a href="https://github.com/diegomontemayor123" target="_blank" rel="noreferrer">GitHub</a></p>
+              <p><a href="https://www.linkedin.com/in/diego-montemayor-812335a5" target="_blank" rel="noreferrer">LinkedIn</a></p>
             </Col>
           </Row>
         </Container>
