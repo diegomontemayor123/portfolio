@@ -65,18 +65,9 @@ const MCPDiagram = () => (
 );
 
 const ZohoDiagram = () => (
-  <div style={{
-    padding: 32,
-    background: 'linear-gradient(135deg,#f8fafc,#e2e8f0)',
-    borderRadius: 16,
-    boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-    width: '100%',   
-    maxWidth: '100%', 
-    boxSizing: 'border-box' 
-  }}>
+  <div style={{padding: 32,background: 'linear-gradient(135deg,#f8fafc,#e2e8f0)',borderRadius: 16,boxShadow: '0 4px 12px rgba(0,0,0,0.15)',width: '100%',   maxWidth: '100%', boxSizing: 'border-box' }}>
     <h4 style={{textAlign: 'center', fontSize:16, fontWeight: 600, color: '#374151', marginBottom: 16}}>Automated Invoicing and CRM Workflow</h4>
-    
-    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginBottom: 16}}>
+    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16}}>
       <Box icon="📅" label="Calendar" color="#3b82f6"/>
       <Arrow/>
       <Box icon="</>" label="Script" color="#10b981"/>
@@ -86,7 +77,7 @@ const ZohoDiagram = () => (
       <Box icon="👤" label="User" color="#f59e0b"/>
     </div>
 
-    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, flexDirection: 'row-reverse'}}>
+    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'row-reverse'}}>
       <Box icon="📧" label="Email" color="#8b5cf6"/>
       <Arrow direction="left"/>
       <Box icon="🧾" label="Invoice" color="#dc2626"/>
