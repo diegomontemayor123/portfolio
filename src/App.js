@@ -72,17 +72,16 @@ const ZohoDiagram = () => (
       <Arrow/>
       <Box icon="</>" label="Script" color="#10b981"/>
       <Arrow/>
-      <Box icon="📋" label="Form" color="#8b5cf6"/>
-      <Arrow/>
-      <Box icon="👤" label="User" color="#f59e0b"/>
+      <Box icon="📋" label="Form" color="#f59e0b"/>
+
     </div>
 
     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'row-reverse'}}>
-      <Box icon="📧" label="Email" color="#8b5cf6"/>
+      <Box icon="📧" label="Email" color="#3b82f6"/>
       <Arrow direction="left"/>
-      <Box icon="🧾" label="Invoice" color="#dc2626"/>
+      <Box icon="🧾" label="Invoice" color="#10b981"/>
       <Arrow direction="left"/>
-      <Box icon="💼" label="CRM" color="#3b82f6"/>
+      <Box icon="💼" label="CRM" color="#f59e0b"/>
     </div>
   </div>
 );
