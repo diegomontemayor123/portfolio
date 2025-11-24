@@ -125,7 +125,7 @@ function App() {return (<>
             </Nav></Navbar.Collapse></Container></Navbar>
       <header className="bg-gradient pt-5 pb-2 text-center text-black"><Container>
         <h1 className="display-4">Hi, I'm Diego</h1>
-        <p className="lead">AI Engineer & Entrepreneur | Ex–Wall Street VP | Yale Economics (Distinction)
+        <p className="lead">Product Engineer & AI Developer | Ex–Wall Street VP | Yale Economics (Distinction)
 </p>
       </Container></header>
       <section id="about" className="py-5">
