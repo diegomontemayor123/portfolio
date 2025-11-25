@@ -77,41 +77,43 @@ const ZohoDiagram = () => (
 );
 
 const projects = [
-      {title: "Excel-Agent MCP Server",
-    tech: "HuggingFace, LangChain, Retreival Augmented Generation (RAG)",
-    description: "Model Context Protocol (MCP) server implementing RAG pipelines with FAISS vector stores for intelligent Excel data extraction and querying. Includes hybrid extraction pipeline combining rule-based table detection with OCR fallback, as well as adaptive chunking to preserve semantic structure across boundaries. The system significantly reduces manual data-entry time through semantic search over structured context from unstructured sources, enabling natural language queries against financial datasets. Built with modular RAG components and efficient embedding caching.",
-    customContent: <MCPDiagram />,
-    alt: "MCP",
-    repoLink: "https://github.com/diegomontemayor123/excel_mcp"},  
-  {title: "Transformer-Based Portfolio Optimizer",
-    tech: "PyTorch, Adam Optimizer, RandomForest",
-    description:"A fully custom-built deep-learning system designed to allocate capital across major blue-chip stocks like AAPL, JPM, and NVDA. The model uses a sequence-to-sequence transformer trained to directly optimize the Sharpe ratio while minimizing overfitting. The full pipeline includes recursive feature selection using Random Forest to reduce dimensionality; a differentiable loss function that penalizes poor returns and excessive leverage; and walk-forward testing across rolling time windows. Training, validation, and backtesting are all GPU-accelerated, and over 1,000 hyperparameter combinations are tested through parallelized grid search. Final outputs include daily portfolio weights, performance visualizations, and backtest analytics compared to benchmarks. Achieved 2.6x cumulative outperformance in simulated backtesting (2017 - 2023) when compared against an equal-weight benchmark, all while maintaining a 25% smaller maximum drawdown (relative).",
-    image: `${process.env.PUBLIC_URL}/images/algo_trader.png`,
-    alt: "Trader",
-    repoLink: "https://github.com/diegomontemayor123/algo_trader"},
-  {title: "LetsFeast – Social Recipe Sharing Platform",
-    tech: "React Native, Node.js, MongoDB",
-    description:"LetsFeast is a prototype full-stack mobile social platform for sharing and discovering user-generated recipes. The app supports likes, bookmarks, threaded comments, and direct messaging. I built the entire stack with a Node.js/Express backend (Joi validation, JWT auth, MongoDB), and a modular React Native frontend (for cross-platform speed) with image uploads, real-time feed filtering, and interactive UI components. Messaging includes push notifications, user avatars, and shared recipe previews via chat. Features like following, commenting, and personalized feeds encourage organic community engagement.",
+  {
+    title: "LetsFeast – Scalable Mobile Product Architecture",
+    tech: "End-to-End Product Lifecycle: From Database Design to UI/UX",
+    description: "To master the full product lifecycle, I architected and built a production-grade social platform from scratch. Unlike simple prototypes, this project focused on handling complex data relationships—managing real-time threaded messaging, dynamic user feeds, and secure authentication. The build features a Node.js backend with JWT-based security and a MongoDB schema optimized for heavy read-operations. On the frontend, I solved complex state management challenges in React Native to deliver a seamless, zero-latency user experience.",
     image: `${process.env.PUBLIC_URL}/images/lets_feast-portrait.png`,
     image2: `${process.env.PUBLIC_URL}/images/lets_feast_3-portrait.png`,
     alt: "LetsFeast App",
-    repoLink: "https://github.com/diegomontemayor123/letsfeast"},
-  {title: "Automated Invoicing & CRM Sync",
-    tech: "Google Apps Script, Zoho API",
-    description:"An end-to-end automation system that connects Google Calendar, Forms, Sheets, and Zoho Invoice to streamline service scheduling and billing. The workflow parses upcoming appointments, sends pre-filled service selection forms, and auto-generates structured invoices based on user input.\n\nBuilt with custom regex parsers, contact matching logic, and OAuth token refresh flows, the system includes error handling, duplicate protection, and dynamic email generation. Designed to reduce manual overhead and improve billing accuracy through modular, maintainable code.",
+    repoLink: "https://github.com/diegomontemayor123/letsfeast"
+  },    
+  {
+    title: "Financial Workflow Automation Engine",
+    tech: "Reducing Manual Data Entry using RAG & LLMs",
+    description: "Startups and funds lose countless hours to manual data extraction. I built this Model Context Protocol (MCP) server to automate that workflow. It doesn't just 'read' files; it understands them. I implemented a Retrieval Augmented Generation (RAG) pipeline that allows users to query unstructured PDFs (invoices, reports) using natural language inside Excel. To solve the 'hallucination' problem, I built a hybrid extraction pipeline—combining rule-based table detection with OCR fallback and semantic chunking.",
+    customContent: <MCPDiagram />,
+    alt: "MCP",
+    repoLink: "https://github.com/diegomontemayor123/excel_mcp"
+  },  
+  {
+    title: "AI-Driven Capital Allocation Model",
+    tech: "Rigorous Regime Testing & Operational Risk Management",
+    description: "I built a deep-learning pipeline utilizing Transformer architecture to optimize for Risk-Adjusted Return (Sharpe Ratio). The engineering focused on real-world constraints, implementing a custom loss function that heavily penalized excessive leverage and drawdown. While backtesting demonstrated significant potential, achieving 2.6x cumulative outperformance in stable regimes, the exercise's greatest value was the operational insight gained: the model's instability during distributional shift highlighted the essential need for rigorous Walk-Forward Optimization and advanced feature engineering before deployment in high-stakes environments.",
+    image: `${process.env.PUBLIC_URL}/images/algo_trader.png`,
+    alt: "Trader",
+    repoLink: "https://github.com/diegomontemayor123/algo_trader"
+  },
+  {
+    title: "Zero-Touch Invoicing & CRM Synchronization",
+    tech: "End-to-End Business Logic Automation",
+    description: "Operational friction kills speed. I built this system to eliminate the manual link between service delivery and billing. The workflow automatically parses calendar appointments, triggers service selection forms for clients, and auto-generates structured invoices in Zoho. Built with defensive coding—including custom regex parsers to catch data errors, duplicate transaction protection, and automated error-logging—it removes human error from the billing process and ensures 100% data consistency between the CRM and the Ledger.",
     customContent: <ZohoDiagram />,
-    alt: "Invoicing System"},
-  {title: "ShareIt Marketplace",
-    tech: "React Native, Node.js, MongoDB",
-    description:"ShareIt is a prototype full-stack mobile marketplace for peer-to-peer rental of outdoor equipment. The platform supports real-time gear listings with images, availability calendars, and category-based filtering. Users can like, comment on, and bookmark gear; all data syncs with a custom Node.js/Express backend and MongoDB. On the frontend, I'm building the app in React Native with modular UI components, form validation, and real-time state updates. ShareIt also features early-stage escrow logic and a secure messaging system for renters and owners to coordinate transactions.",
-    image: `${process.env.PUBLIC_URL}/images/share_it-portrait.png`,
-    image2: `${process.env.PUBLIC_URL}/images/share_it_3-portrait.png`,
-    alt: "ShareIt App",
-    repoLink: "https://github.com/diegomontemayor123/shareit"
-  }
+    alt: "Invoicing System"
+  },
 ]
 
-function App() {return (<>
+function App() {
+  return (
+    <>
       <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
         <Container>
           <Navbar.Brand href="#home">Diego Montemayor</Navbar.Brand>
@@ -122,54 +124,67 @@ function App() {return (<>
               <Nav.Link href="#projects">Projects</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
               <Nav.Link href={`${process.env.PUBLIC_URL}/images/Montemayor_Diego_CV.pdf`}>Resume</Nav.Link>
-            </Nav></Navbar.Collapse></Container></Navbar>
-      <header className="bg-gradient pt-5 pb-2 text-center text-black"><Container>
-        <h1 className="display-4">Hi, I'm Diego</h1>
-        <p className="lead">Product Engineer & AI Developer | Ex–Wall Street VP | Yale Economics (Distinction)
-</p>
-      </Container></header>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      
+      <header className="bg-gradient pt-5 pb-2 text-center text-black">
+        <Container>
+          <h1 className="display-4">Hi, I'm Diego</h1>
+          <p className="lead">Technical Operations & Implementation | Full-Stack Builder | Ex Wall St VP | Yale Economics (Distinction)</p>
+        </Container>
+      </header>
+      
       <section id="about" className="py-5">
         <Container>
           <h2 className="text-center mb-4">About Me</h2>
           <Row className="justify-content-center">
             <Col md={10} lg={10} className="text-center">
-<p>I'm a self-taught Full-Stack Engineer and AI developer, and a former Vice President in Structured Credit investing on Wall Street. I leverage my background in both high-stakes finance and technology to design innovative systems that solve real-world problems with precision and reliability. A graduate of Yale University, I bring a pragmatic, problem-solving mindset to every project, focusing on scalable, efficient systems that automate complex workflows.</p>
-<p>I've built transformer-based models leveraging PyTorch and RandomForest for portfolio optimization, RAG (retrieval-augmented generation) pipelines using FAISS vector stores, and full-stack mobile applications. My research interests lie at the intersection of AI and practical applications, including adaptive retrieval systems, context-aware factual grounding, and efficient context compression. I'm committed to designing systems that balance cutting-edge innovation with rigorous verification and real-world accuracy. My goal is to push the boundaries of what is possible while ensuring that the solutions I develop remain trustworthy, scalable, and transparent.</p>
- <p><a href={`${process.env.PUBLIC_URL}/images/Montemayor_Diego_CV.pdf`} target="_blank" rel="noopener noreferrer" style={{ fontWeight: '600', color: '#007bff', textDecoration: 'underline' }}>
-                  Download my Resume (PDF)</a></p></Col></Row></Container>
+              <p>I combine nearly a decade of institutional finance rigor with a modern full-stack engineering toolkit to bridge the gap between <strong>business strategy and technical execution</strong>. Why leave a VP role to build software? Because the best operators of the next decade won't just manage processes—they will automate them. After years of identifying bottlenecks in high-stakes environments, I retooled to build the solutions myself. I am now seeking a <strong>Technical Operations or Implementation</strong> role where I can apply my commercial experience solving complex problems and use my engineering skillset to deliver immediate leverage.</p>
+              <p>
+                <a href={`${process.env.PUBLIC_URL}/images/Montemayor_Diego_CV.pdf`} target="_blank" rel="noopener noreferrer" style={{ fontWeight: '600', color: '#007bff', textDecoration: 'underline' }}>
+                  Download my Resume (PDF)
+                </a>
+              </p>
+            </Col>
+          </Row>
+        </Container>
       </section>
+      
       <section id="projects" className="py-5 bg-light">
         <Container>
           <h2 className="text-center mb-4">Projects</h2>
-    {projects.map((project, index) => (
-  <Row key={index} className={`align-items-center mb-5 ${index % 2 === 1 ? "flex-row-reverse" : ""}`}>
-    <Col md={6} className={`d-flex justify-content-center ${index % 2 === 1 ? 'ps-md-5' : 'pe-md-5'} ${project.image2 ? 'stack-1000' : 'stack-768'}`}>
-      <div className="project-images">
-        {project.customContent ? project.customContent : (
-          <>
-            <Image src={project.image} alt={project.alt} fluid rounded
-              style={{ boxShadow: project.image.endsWith("portrait.png") ? "none" : "0 4px 12px rgba(0,0,0,0.15)" }} />
-            {project.image2 && <Image src={project.image2} alt={project.alt} fluid rounded style={{ boxShadow: project.image2.endsWith("portrait.png") ? "none" : "0 4px 12px rgba(0,0,0,0.15)" }} />}
-          </>
-        )}
-      </div>
-    </Col>
-    <Col md={6} className={`project-text ${index % 2 === 1 ? 'pe-md-5' : 'ps-md-5'}`}>
-      <h3>{project.title}</h3>
-      <p><strong>Tech Stack:</strong> {project.tech}</p>
-      <p>{project.description}</p>
-      {project.repoLink && (
-        <p>
-          <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-            View on GitHub
-          </a>
-        </p>
-      )}
-    </Col>
-  </Row>
-))}
-            </Container>
+          {projects.map((project, index) => (
+            <Row key={index} className={`align-items-center mb-5 ${index % 2 === 1 ? "flex-row-reverse" : ""}`}>
+              <Col md={6} className={`d-flex justify-content-center ${index % 2 === 1 ? 'ps-md-5' : 'pe-md-5'} ${project.image2 ? 'stack-1000' : 'stack-768'}`}>
+                <div className="project-images">
+                  {project.customContent ? project.customContent : (
+                    <>
+                      <Image src={project.image} alt={project.alt} fluid rounded
+                        style={{ boxShadow: project.image.endsWith("portrait.png") ? "none" : "0 4px 12px rgba(0,0,0,0.15)" }} />
+                      {project.image2 && <Image src={project.image2} alt={project.alt} fluid rounded style={{ boxShadow: project.image2.endsWith("portrait.png") ? "none" : "0 4px 12px rgba(0,0,0,0.15)" }} />}
+                    </>
+                  )}
+                </div>
+              </Col>
+              <Col md={6} className={`project-text ${index % 2 === 1 ? 'pe-md-5' : 'ps-md-5'}`}>
+                <h3>{project.title}</h3>
+                <p><strong>{project.tech}</strong></p>
+                <p dangerouslySetInnerHTML={{ __html: project.description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>') }}></p>
+                {project.repoLink && (
+                  <p>
+                    <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                      View on GitHub
+                    </a>
+                  </p>
+                )}
+              </Col>
+            </Row>
+          ))}
+        </Container>
       </section>
+      
       <section id="contact" className="py-5 bg-light">
         <Container>
           <h2 className="text-center mb-4">Contact</h2>
@@ -182,6 +197,7 @@ function App() {return (<>
           </Row>
         </Container>
       </section>
+      
       <footer className="bg-dark text-white text-center py-3">
         <Container><p>Last Updated November 2025</p></Container>
       </footer>
