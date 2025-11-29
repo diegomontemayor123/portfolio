@@ -132,7 +132,7 @@ function App() {
       <header className="bg-gradient pt-5 pb-2 text-center text-black">
         <Container>
           <h1 className="display-4">Hi, I'm Diego</h1>
-          <p className="lead">Technical Operations & Implementation | Full-Stack Builder | Ex Wall St VP | Yale Economics (Distinction)</p>
+          <p className="lead">Technical Operations | Full-Stack Builder | Ex Wall St VP | Yale Economics (Distinction)</p>
         </Container>
       </header>
       
@@ -199,7 +199,7 @@ function App() {
       </section>
       
       <footer className="bg-dark text-white text-center py-3">
-        <Container><p>Last Updated November 2025</p></Container>
+        <Container><p>Last Updated November 28, 2025</p></Container>
       </footer>
     </>
   );
