@@ -77,23 +77,24 @@ const ZohoDiagram = () => (
 );
 
 const projects = [
-  {
-    title: "LetsFeast – Scalable Mobile Platform",
-    tech: "End-to-End Product Lifecycle: From Database Design to UI/UX",
-    description: "To master the full product lifecycle, I architected and built a production-grade social platform from scratch. Unlike simple prototypes, this project focused on handling complex data relationships—managing real-time threaded messaging, dynamic user feeds, and secure authentication. The build features a Node.js backend with JWT-based security and a MongoDB schema optimized for heavy read-operations. On the frontend, I solved complex state management challenges in React Native to deliver a seamless, zero-latency user experience.",
-    image: `${process.env.PUBLIC_URL}/images/lets_feast-portrait.png`,
-    image2: `${process.env.PUBLIC_URL}/images/lets_feast_3-portrait.png`,
-    alt: "LetsFeast App",
-    repoLink: "https://github.com/diegomontemayor123/letsfeast"
-  },    
-  {
+    {
     title: "Financial Workflow Automation Engine",
     tech: "Reducing Manual Data Entry using RAG & LLMs",
     description: "Startups and funds lose countless hours to manual data extraction. I built this Model Context Protocol (MCP) server to automate that workflow. It doesn't just 'read' files; it understands them. I implemented a Retrieval Augmented Generation (RAG) pipeline that allows users to query unstructured PDFs (invoices, reports) using natural language inside Excel. To solve the 'hallucination' problem, I built a hybrid extraction pipeline—combining rule-based table detection with OCR fallback and semantic chunking.",
     customContent: <MCPDiagram />,
     alt: "MCP",
     repoLink: "https://github.com/diegomontemayor123/excel_mcp"
-  },  
+  }, 
+  {
+    title: "ShareIt – Scalable Mobile Marketplace",
+    tech: "End-to-End Product Lifecycle: From Database Design to UI/UX",
+    description: "To master the full product lifecycle, I architected and built a prototype Gear Rental Marketplace from scratch. Unlike simple prototypes, this project focused on handling complex data relationships—managing real-time threaded messaging, dynamic user feeds, and secure authentication. The build features a Node.js backend with JWT-based security and a MongoDB schema optimized for heavy read-operations. On the frontend, I solved complex state management challenges in React Native to deliver a seamless, zero-latency user experience.",
+    image: `${process.env.PUBLIC_URL}/images/share_it-portrait.png`,
+    image2: `${process.env.PUBLIC_URL}/images/share_it_3-portrait.png`,
+    alt: "LetsFeast App",
+    repoLink: "https://github.com/diegomontemayor123/letsfeast"
+  },    
+
   {
     title: "AI-Driven Capital Allocation Model",
     tech: "Rigorous Regime Testing & Operational Risk Management",

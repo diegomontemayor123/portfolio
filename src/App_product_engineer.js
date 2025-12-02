@@ -125,7 +125,7 @@ function App() {return (<>
             </Nav></Navbar.Collapse></Container></Navbar>
       <header className="bg-gradient pt-5 pb-2 text-center text-black"><Container>
         <h1 className="display-4">Hi, I'm Diego</h1>
-        <p className="lead">Technical Operations & Implementation | Full-Stack Builder | Ex Wall St VP | Yale Economics (Distinction)
+        <p className="lead">Product Engineer & AI Developer | Ex–Wall Street VP | Yale Economics (Distinction)
 </p>
       </Container></header>
       <section id="about" className="py-5">
@@ -133,8 +133,6 @@ function App() {return (<>
           <h2 className="text-center mb-4">About Me</h2>
           <Row className="justify-content-center">
             <Col md={10} lg={10} className="text-center">
-<p>I combine nearly a decade of institutional finance rigor with a modern full-stack engineering toolkit to bridge business logic & technical execution. Why leave a VP role to build software? Because I believe the best operators in the next decade will be those who can build their own tools. After years of relying on engineering teams to update models or fix data pipelines, I built the skills to do it myself. I am now looking for a role where I can apply my commercial experience to complex problems, while using my technical background to automate the solutions.</p>
-<p></p>
 <p>I'm a self-taught Full-Stack Engineer and AI developer, and a former Vice President in Structured Credit investing on Wall Street. I leverage my background in both high-stakes finance and technology to design innovative systems that solve real-world problems with precision and reliability. A graduate of Yale University, I bring a pragmatic, problem-solving mindset to every project, focusing on scalable, efficient systems that automate complex workflows.</p>
 <p>I've built transformer-based models leveraging PyTorch and RandomForest for portfolio optimization, RAG (retrieval-augmented generation) pipelines using FAISS vector stores, and full-stack mobile applications. My research interests lie at the intersection of AI and practical applications, including adaptive retrieval systems, context-aware factual grounding, and efficient context compression. I'm committed to designing systems that balance cutting-edge innovation with rigorous verification and real-world accuracy. My goal is to push the boundaries of what is possible while ensuring that the solutions I develop remain trustworthy, scalable, and transparent.</p>
  <p><a href={`${process.env.PUBLIC_URL}/images/Montemayor_Diego_CV.pdf`} target="_blank" rel="noopener noreferrer" style={{ fontWeight: '600', color: '#007bff', textDecoration: 'underline' }}>
