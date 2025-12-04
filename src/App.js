@@ -142,7 +142,7 @@ function App() {
           <h2 className="text-center mb-4">About Me</h2>
           <Row className="justify-content-center">
             <Col md={10} lg={10} className="text-center">
-              <p>I combine nearly a decade of institutional finance rigor with a modern full-stack engineering toolkit to bridge the gap between <strong>business strategy and technical execution</strong>. Why leave a VP role to build software? Because the best operators of the next decade won't just manage processes, but instead automate them. I am now seeking roles where I can apply my commercial experience solving complex problems and use my technical skillset to deliver immediate leverage.</p>
+              <p>Product-focused technical Operator. Ex-Sixth Street VP and JPM Structurer. I bridge the gap between complex financial logic and scalable software architecture. I build full-stack solutions to automate high-stakes workflows.</p>
               <p>
                 <a href={`${process.env.PUBLIC_URL}/images/Montemayor_Diego_CV.pdf`} target="_blank" rel="noopener noreferrer" style={{ fontWeight: '600', color: '#007bff', textDecoration: 'underline' }}>
                   Download my Resume (PDF)
