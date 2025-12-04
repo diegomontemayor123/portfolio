@@ -133,7 +133,7 @@ function App() {
       <header className="bg-gradient pt-5 pb-2 text-center text-black">
         <Container>
           <h1 className="display-4">Hi, I'm Diego</h1>
-          <p className="lead">Builder-Operator | Ex Wall St VP | Yale</p>
+          <p className="lead">Builder-Operator | Ex Wall St VP | Yale (Distinction)</p>
         </Container>
       </header>
       
