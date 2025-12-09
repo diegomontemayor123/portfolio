@@ -105,7 +105,7 @@ const projects = [
   {
   title:"Startup Momentum Tracker",
   tech:"Event-Driven Data Pipeline (in progress)",
-  description:"Continuously synchronizes hiring signals and funding events into a unified Snowflake model. The pipeline polls HN job posts, verifies signed funding webhooks, and maintains lightweight SCD tables to expose always-fresh company profiles via API. Built with strict input validation, HMAC signature checks, and idempotent loaders to prevent duplicates and ensure consistent lineage across ingestion, modeling, and serving layers.",
+  description:"Continuously synchronizes hiring signals and funding events into a unified Snowflake model. The pipeline polls HN job posts, verifies signed funding webhooks, and maintains lightweight SCD tables to expose always-fresh company profiles via API. Built with strict input validation, signature checks, and idempotent loaders to prevent duplicates and ensure consistency across ingestion, modeling, and customer-facing layers.",
   repoLink:"https://github.com/diegomontemayor123/startup_data_pipe/tree/main",
   customContent:<MomentumDiagram/>,
   alt:"Momentum Tracker System"
@@ -113,7 +113,7 @@ const projects = [
   {
     title: "Financial Workflow Automation Engine",
     tech: "Reducing Manual Data Entry using RAG & LLMs",
-    description: "Startups and funds lose countless hours to manual data extraction. I built this Model Context Protocol (MCP) server to automate that workflow. It doesn't just 'read' files; it understands them. I implemented a Retrieval Augmented Generation (RAG) pipeline that allows users to query unstructured PDFs (invoices, reports) using natural language inside Excel. To solve the 'hallucination' problem, I built a hybrid extraction pipeline—combining rule-based table detection with OCR fallback and semantic chunking.",
+    description: "Startups and funds lose countless hours to manual data extraction. I built this Model Context Protocol (MCP) server to automate that workflow. It doesn't just 'read' files; it understands them. I implemented a Retrieval Augmented Generation (RAG) pipeline that allows users to query unstructured PDFs (invoices, reports) using natural language inside Excel. To solve the 'hallucination' problem, I built a hybrid extraction pipeline combining rule-based table detection with OCR fallback and semantic chunking.",
     customContent: <MCPDiagram />,
     alt: "MCP",
     repoLink: "https://github.com/diegomontemayor123/excel_mcp"
