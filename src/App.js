@@ -82,7 +82,7 @@ const MomentumDiagram=()=>(
     <div style={{display:'flex',alignItems:'center',justifyContent:'center',marginBottom:16}}>
       <Box icon="📰" label="HN Poller" color="#3b82f6"/>
       <Arrow/>
-      <Box icon="🔏" label="Webhook" color="#10b981"/>
+      <Box icon="🔏" label="Funding Webhook" color="#10b981"/>
       <Arrow/>
       <Box icon="🧪" label="Validate" color="#f59e0b"/>
     </div>
@@ -91,12 +91,12 @@ const MomentumDiagram=()=>(
       <Arrow/>
       <Box icon="📊" label="Models" color="#10b981"/>
       <Arrow/>
-      <Box icon="📁" label="CustView" color="#f59e0b"/>
+      <Box icon="📁" label="Client View" color="#f59e0b"/>
     </div>
     <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
       <Box icon="🌐" label="API" color="#10b981"/>
       <Arrow/>
-      <Box icon="🏢" label="Profile" color="#3b82f6"/>
+      <Box icon="🏢" label="Company Profile" color="#3b82f6"/>
     </div>
   </div>
 )
