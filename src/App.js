@@ -94,9 +94,9 @@ const MomentumDiagram=()=>(
       <Box icon="📁" label="Client View" color="#f59e0b"/>
     </div>
     <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-      <Box icon="🌐" label="API" color="#10b981"/>
+      <Box icon="🌐" label="API" color="#3b82f6"/>
       <Arrow/>
-      <Box icon="🏢" label="Company Profile" color="#3b82f6"/>
+      <Box icon="🏢" label="Company Profile" color="#f59e0b"/>
     </div>
   </div>
 )
