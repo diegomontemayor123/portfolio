@@ -76,8 +76,41 @@ const ZohoDiagram = () => (
   </div>
 );
 
+const MomentumDiagram=()=>(
+  <div style={{padding:12,background:'linear-gradient(135deg,#f8fafc,#e2e8f0)',borderRadius:16,boxShadow:'0 4px 12px rgba(0,0,0,0.15)',width:'100%',maxWidth:'100%',boxSizing:'border-box'}}>
+    <h4 style={{textAlign:'center',fontSize:16,fontWeight:600,color:'#374151',marginBottom:16}}>Startup Momentum Tracking Pipeline</h4>
+    <div style={{display:'flex',alignItems:'center',justifyContent:'center',marginBottom:16}}>
+      <Box icon="📰" label="HN Poller" color="#3b82f6"/>
+      <Arrow/>
+      <Box icon="🔏" label="Webhook" color="#10b981"/>
+      <Arrow/>
+      <Box icon="🧪" label="Validate" color="#f59e0b"/>
+    </div>
+    <div style={{display:'flex',alignItems:'center',justifyContent:'center',marginBottom:16}}>
+      <Box icon="❄️" label="Snowflake" color="#3b82f6"/>
+      <Arrow/>
+      <Box icon="📊" label="Models" color="#10b981"/>
+      <Arrow/>
+      <Box icon="📁" label="CustView" color="#f59e0b"/>
+    </div>
+    <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
+      <Box icon="🌐" label="API" color="#10b981"/>
+      <Arrow/>
+      <Box icon="🏢" label="Profile" color="#3b82f6"/>
+    </div>
+  </div>
+)
+
 const projects = [
-    {
+  {
+  title:"Startup Momentum Tracker",
+  tech:"Event-Driven Data Pipeline (in progress)",
+  description:"Continuously synchronizes hiring signals and funding events into a unified Snowflake model. The pipeline polls HN job posts, verifies signed funding webhooks, and maintains lightweight SCD tables to expose always-fresh company profiles via API. Built with strict input validation, HMAC signature checks, and idempotent loaders to prevent duplicates and ensure consistent lineage across ingestion, modeling, and serving layers.",
+  repoLink:"https://github.com/diegomontemayor123/startup_data_pipe/tree/main",
+  customContent:<MomentumDiagram/>,
+  alt:"Momentum Tracker System"
+} ,
+  {
     title: "Financial Workflow Automation Engine",
     tech: "Reducing Manual Data Entry using RAG & LLMs",
     description: "Startups and funds lose countless hours to manual data extraction. I built this Model Context Protocol (MCP) server to automate that workflow. It doesn't just 'read' files; it understands them. I implemented a Retrieval Augmented Generation (RAG) pipeline that allows users to query unstructured PDFs (invoices, reports) using natural language inside Excel. To solve the 'hallucination' problem, I built a hybrid extraction pipeline—combining rule-based table detection with OCR fallback and semantic chunking.",
@@ -122,7 +155,7 @@ function App() {
           <Navbar.Collapse id="nav-collapse">
             <Nav className="ms-auto">
               <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#projects">Projects</Nav.Link>
+              <Nav.Link href="#projects">Product Builds</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
               <Nav.Link href={`${process.env.PUBLIC_URL}/images/Montemayor_Diego_CV.pdf`}>Resume</Nav.Link>
             </Nav>
@@ -155,7 +188,7 @@ function App() {
       
       <section id="projects" className="py-5 bg-light">
         <Container>
-          <h2 className="text-center mb-4">Projects</h2>
+          <h2 className="text-center mb-4">Product Builds</h2>
           {projects.map((project, index) => (
             <Row key={index} className={`align-items-center mb-5 ${index % 2 === 1 ? "flex-row-reverse" : ""}`}>
               <Col md={6} className={`d-flex justify-content-center ${index % 2 === 1 ? 'ps-md-5' : 'pe-md-5'} ${project.image2 ? 'stack-1000' : 'stack-768'}`}>
@@ -200,7 +233,7 @@ function App() {
       </section>
       
       <footer className="bg-dark text-white text-center py-3">
-        <Container><p>Last Updated December, 2025</p></Container>
+        <Container><p>Last Updated December 2025</p></Container>
       </footer>
     </>
   );
