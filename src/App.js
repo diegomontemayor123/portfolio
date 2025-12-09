@@ -139,7 +139,7 @@ const projects = [
   {
     title: "Zero-Touch Invoicing & CRM Synchronization",
     tech: "End-to-End Business Logic Automation",
-    description: "Operational friction kills speed. I built this system to eliminate the manual link between service delivery and billing. The workflow automatically parses calendar appointments, triggers service selection forms for clients, and auto-generates structured invoices in Zoho. Built with defensive coding—including custom regex parsers to catch data errors, duplicate transaction protection, and automated error-logging—it removes human error from the billing process and ensures 100% data consistency between the CRM and the Ledger.",
+    description: "Operational friction kills speed. I built this system to eliminate the manual link between service delivery and billing. The workflow automatically parses calendar appointments, triggers service selection forms for clients, and auto-generates structured invoices in Zoho. Built with defensive coding—including custom regex parsers to catch data errors, duplicate transaction protection, and automated error-logging. It removes human error from the billing process and ensures 100% data consistency between the CRM and the Ledger.",
     customContent: <ZohoDiagram />,
     alt: "Invoicing System"
   },
