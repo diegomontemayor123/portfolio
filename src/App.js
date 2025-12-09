@@ -175,7 +175,7 @@ function App() {
           <h2 className="text-center mb-4">About Me</h2>
           <Row className="justify-content-center">
             <Col md={10} lg={10} className="text-center">
-              <p>I combine nearly a decade of institutional finance rigor with a modern engineering toolkit to bridge the gap between <strong>business strategy and technical execution</strong>. Why leave a VP role to work at a startup? Because the best operators of the next decade won't just manage processes, but instead automate them. I am now seeking roles where I can apply my commercial experience solving complex problems and use my technical skillset to deliver immediate leverage.</p>
+              <p>I combine 7+ years of institutional finance rigor with a modern engineering toolkit to bridge the gap between <strong>business strategy and technical execution</strong>. Why leave a VP role to work at a startup? Because the best operators of the next decade won't just manage processes, but instead automate the execution. I am now seeking roles where I can apply my commercial experience solving complex problems and use my technical skillset to deliver immediate leverage.</p>
               <p>
                 <a href={`${process.env.PUBLIC_URL}/images/Montemayor_Diego_CV.pdf`} target="_blank" rel="noopener noreferrer" style={{ fontWeight: '600', color: '#007bff', textDecoration: 'underline' }}>
                   Download my Resume (PDF)
