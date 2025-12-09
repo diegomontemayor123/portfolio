@@ -121,7 +121,7 @@ const projects = [
   {
     title: "Share It – Scalable Mobile Marketplace",
     tech: "End-to-End Product Lifecycle: From Database Design to UI/UX",
-    description: "To master the full product lifecycle, I architected and built a prototype Gear Rental Marketplace from scratch. Unlike simple prototypes, this project focused on handling complex data relationships—managing real-time threaded messaging, dynamic user feeds, and secure authentication. The build features a Node.js backend with JWT-based security and a MongoDB schema optimized for heavy read-operations. On the frontend, I solved complex state management challenges in React Native to deliver a seamless, zero-latency user experience.",
+    description: "To master the full product lifecycle, I architected and built a prototype Gear Rental Marketplace from scratch. Unlike simple prototypes, this project focused on handling complex data relationships, managing real-time threaded messaging, dynamic user feeds, and secure authentication. The build features a Node.js backend with JWT-based security and a MongoDB schema optimized for heavy read-operations. On the frontend, I solved complex state management challenges in React Native to deliver a seamless, zero-latency user experience.",
     image: `${process.env.PUBLIC_URL}/images/share_it-portrait.png`,
     image2: `${process.env.PUBLIC_URL}/images/share_it_3-portrait.png`,
     alt: "LetsFeast App",
